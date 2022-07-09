@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void remove(View view){
         StringBuffer s = new StringBuffer(typing.getText().toString());
+        if(s.length() == 0){
+            return;
+        }
         s.deleteCharAt(s.length() - 1);
         typing.setText(s.toString());
         result.setText("");
